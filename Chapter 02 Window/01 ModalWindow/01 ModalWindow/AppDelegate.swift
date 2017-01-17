@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 }
 
-// MARK: - Window 设置
+// MARK: - Window 界面设置
 extension AppDelegate {
 	
 	/// 设置 Window
