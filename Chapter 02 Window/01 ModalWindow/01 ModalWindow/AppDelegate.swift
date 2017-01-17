@@ -53,8 +53,14 @@ extension AppDelegate {
 		window.contentView	= bgView
 		/// 2. 添加按钮
 		createButton()
-	
 		/// 3. window 设置
+		setupWindowUI()
+		/// 4. window 标题添加按钮
+		createButtonToTitle()
+	}
+	
+	/// window 设置
+	private func setupWindowUI() {
 		/// 3.1 设置window 背景色
 		self.window.backgroundColor = NSColor.gray
 		/// 3.2 设置window 标题
@@ -63,6 +69,17 @@ extension AppDelegate {
 		/// 3.3 设置window 图片
 		let image = #imageLiteral(resourceName: "AppIcon")
 		self.window.standardWindowButton(.documentIconButton)?.image = image
+	}
+	
+	/// 标题添加按钮
+	private func createButtonToTitle() {
+		let titleView = self.window.standardWindowButton(.closeButton)?.superview
+		let x = (self.window.contentView?.frame.size.width)! - 100
+		let y = ((titleView?.frame.height)! - 24) * 0.5
+		let buttons = NSButton(frame: CGRect(x: x, y: y, width: 80, height: 24))
+		buttons.title = "Register"
+		buttons.bezelStyle = .roundRect
+		titleView?.addSubview(buttons)
 	}
 	
 	/// 创建按钮
@@ -102,6 +119,7 @@ extension AppDelegate {
 		window.contentView?.addSubview(sessionWindow)
 	}
 
+	// MARK:- 按钮点击事件
 	/// 打开window
 	@objc private func openWindowAct() {
 		print(#function)
