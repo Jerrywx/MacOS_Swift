@@ -13,6 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 	@IBOutlet weak var window: NSWindow!
 
+	var myWindow: NSWindow!
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		setupWindow()
@@ -143,6 +144,16 @@ extension AppDelegate {
 	/// 打开window
 	@objc private func openWindowAct() {
 		print(#function)
+		
+		let frame = CGRect(x: 100, y: 100, width: 400, height: 280)
+		let style: NSWindowStyleMask = [.titled, .closable, .resizable]
+		// 创建 window
+		myWindow = NSWindow(contentRect: frame, styleMask: style, backing: .buffered, defer: false)
+		myWindow?.title = "New Create Window"
+		// 显示 window
+		myWindow?.makeKeyAndOrderFront(self)
+		// 居中显示
+		myWindow?.center()
 	}
 	
 	/// 显示Modal Window
