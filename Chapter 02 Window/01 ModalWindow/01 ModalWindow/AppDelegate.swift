@@ -16,15 +16,30 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		setupWindow()
+		
+		/// 关闭应用方法2
+		NotificationCenter.default.addObserver(self, 
+		                                       selector:#selector(AppDelegate.windowClose(_:)),  
+		                                       name: NSNotification.Name.NSWindowWillClose, 
+		                                       object: nil)
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {
 		// Insert code here to tear down your application
 	}
 	
+	/// 关闭应用方法1
 	/// “关闭最后一个 window 窗口或者关闭应用唯一的一个 window 时应用自动退出。”
-	func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-		return true
+//	func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+//		return true
+//	}
+	
+	func windowClose(_ aNotification: Notification) {
+		if let window = aNotification.object {
+			if window as! NSObject == self.window! {
+				NSApp.terminate(self)
+			}
+		}
 	}
 }
 
