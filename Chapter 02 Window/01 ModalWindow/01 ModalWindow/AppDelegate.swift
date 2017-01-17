@@ -14,15 +14,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	@IBOutlet weak var window: NSWindow!
 
 	var myWindow: NSWindow!
+	
+	var modalWindow: NSWindow!
+	
+	
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		setupWindow()
+		
+		let frame = CGRect(x: 100, y: 100, width: 400, height: 280)
+		let style: NSWindowStyleMask = [.titled, .closable, .resizable]
+		// 创建 window
+		self.myWindow = NSWindow(contentRect: frame, styleMask: style, backing: .buffered, defer: false)
+		self.myWindow?.title = "New Create Window"
 		
 		/// 关闭应用方法2
 //		NotificationCenter.default.addObserver(self, 
 //		                                       selector:#selector(AppDelegate.windowClose(_:)),  
 //		                                       name: NSNotification.Name.NSWindowWillClose, 
 //		                                       object: nil)
+		
+		/// 关闭 modal
+		NotificationCenter.default.addObserver(self, 
+		                                         selector:#selector(AppDelegate.windowClose(_:)),  
+		                                         name: NSNotification.Name.NSWindowWillClose,
+		                                         object: nil)
+		
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {
@@ -43,15 +60,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 				NSApp.terminate(self)
 			}
 		}
+		/// 关闭 modal
+		NSApplication.shared().stopModal()
 	}
-	
-	
+
 	/// 应用关闭后 点击 Dock 菜单再次打开应用
 	func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
 		self.window.makeKeyAndOrderFront(self)
 		return true
 	}
-	
 }
 
 // MARK: - Window 界面设置
@@ -159,6 +176,9 @@ extension AppDelegate {
 	/// 显示Modal Window
 	@objc private func showModalWindow() {
 		print(#function)
+		
+		
+		NSApplication.shared().runModal(for: self.myWindow)
 	}
 	
 	/// 显示 Session Window
