@@ -48,6 +48,8 @@ extension AppDelegate {
 	
 	/// 设置 Window
 	fileprivate func setupWindow() {
+		/// 是否记录上次窗口关闭位置
+		self.window.isRestorable = false
 		/// 1. 创建自定义背景View
 		let bgView			= MainView(frame: (window.contentView?.bounds)!)
 		window.contentView	= bgView
