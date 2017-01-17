@@ -17,16 +17,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	var modalWindow: NSWindow!
 	
-	
+	var sessionCode : NSModalSession!
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		setupWindow()
-		
-		let frame = CGRect(x: 100, y: 100, width: 400, height: 280)
-		let style: NSWindowStyleMask = [.titled, .closable, .resizable]
-		// 创建 window
-		self.myWindow = NSWindow(contentRect: frame, styleMask: style, backing: .buffered, defer: false)
-		self.myWindow?.title = "New Create Window"
 		
 		/// 关闭应用方法2
 //		NotificationCenter.default.addObserver(self, 
@@ -59,6 +53,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			if window as! NSObject == self.window! {
 				NSApp.terminate(self)
 			}
+		}
+		
+		if let sessionCode = sessionCode {
+			NSApplication.shared().endModalSession(sessionCode)
 		}
 		/// 关闭 modal
 		NSApplication.shared().stopModal()
@@ -176,14 +174,26 @@ extension AppDelegate {
 	/// 显示Modal Window
 	@objc private func showModalWindow() {
 		print(#function)
+		let frame = CGRect(x: 100, y: 100, width: 400, height: 280)
+		let style: NSWindowStyleMask = [.titled, .closable, .resizable]
+		// 创建 window
+		self.modalWindow = NSWindow(contentRect: frame, styleMask: style, backing: .buffered, defer: false)
+		self.modalWindow?.title = "New Create Window"
 		
-		
-		NSApplication.shared().runModal(for: self.myWindow)
+		NSApplication.shared().runModal(for: self.modalWindow)
 	}
 	
 	/// 显示 Session Window
 	@objc private func showSessionWindow() {
 		print(#function)
+		
+		let frame = CGRect(x: 100, y: 100, width: 400, height: 280)
+		let style: NSWindowStyleMask = [.titled, .closable, .resizable]
+		// 创建 window
+		self.modalWindow = NSWindow(contentRect: frame, styleMask: style, backing: .buffered, defer: false)
+		self.modalWindow?.title = "New Create Window"
+		
+		sessionCode = NSApplication.shared().beginModalSession(for: self.modalWindow)
 	}
 }
 
