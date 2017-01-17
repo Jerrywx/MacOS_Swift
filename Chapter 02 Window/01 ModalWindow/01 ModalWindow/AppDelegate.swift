@@ -33,9 +33,16 @@ extension AppDelegate {
 		window.contentView	= bgView
 		/// 2. 添加按钮
 		createButton()
-		
+	
 		/// 3. window 设置
+		/// 3.1 设置window 背景色
 		self.window.backgroundColor = NSColor.gray
+		/// 3.2 设置window 标题
+		self.window.representedURL = URL(string: "WindowTitle")
+		self.window.title = "Window Title"
+		/// 3.3 设置window 图片
+		let image = #imageLiteral(resourceName: "AppIcon")
+		self.window.standardWindowButton(.documentIconButton)?.image = image
 	}
 	
 	/// 创建按钮
