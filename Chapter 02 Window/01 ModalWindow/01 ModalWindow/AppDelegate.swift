@@ -30,18 +30,61 @@ extension AppDelegate {
 	fileprivate func setupWindow() {
 		/// 1. 创建自定义背景View
 		let bgView			= MainView(frame: (window.contentView?.bounds)!)
-		bgView.wantsLayer	= true
 		window.contentView	= bgView
-		bgView.layer?.backgroundColor = NSColor.red.cgColor
-		
 		/// 2. 添加按钮
-		let testView = NSView(frame: CGRect(x: 20, y: 20, width: 20, height: 20))
-		testView.wantsLayer				= true
-		testView.layer?.backgroundColor = NSColor.orange.cgColor
-		bgView.addSubview(testView)
-		
-		
+		createButton()
 	}
 	
+	/// 创建按钮
+	private func createButton() {
+		
+		/// 创建打开 Window 按钮
+		let openWindow	= NSButton(frame: CGRect(x: 40,
+		                                        y: 40, 
+		                                        width: 120,
+		                                        height: 30))
+		openWindow.bezelStyle	= .regularSquare
+		openWindow.title		= "Create Window"
+		openWindow.target		= self
+		openWindow.action		= #selector(openWindowAct)
+		window.contentView?.addSubview(openWindow)
+		
+		/// 创建Modal Window
+		let  modalWindow = NSButton(frame: CGRect(x: 40, 
+		                                          y: 100, 
+		                                          width: 120, 
+		                                          height: 30))
+		modalWindow.bezelStyle	= .regularSquare
+		modalWindow.title		= "Show Modal Window"
+		modalWindow.target		= self
+		modalWindow.action		= #selector(showModalWindow)
+		window.contentView?.addSubview(modalWindow)
+		
+		/// 创建 Sessions Window
+		let sessionWindow = NSButton(frame: CGRect(x: 40, 
+		                                           y: 160, 
+		                                           width: 120, 
+		                                           height: 30))
+		sessionWindow.bezelStyle	= .regularSquare
+		sessionWindow.title			= "Show Sessions Window"
+		sessionWindow.target		= self
+		sessionWindow.action		= #selector(showSessionWindow)
+		window.contentView?.addSubview(sessionWindow)
+	}
+
+	/// 打开window
+	@objc private func openWindowAct() {
+		print(#function)
+	}
+	
+	/// 显示Modal Window
+	@objc private func showModalWindow() {
+		print(#function)
+	}
+	
+	/// 显示 Session Window
+	@objc private func showSessionWindow() {
+		print(#function)
+	}
 }
 
