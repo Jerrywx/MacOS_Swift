@@ -21,6 +21,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func applicationWillTerminate(_ aNotification: Notification) {
 		// Insert code here to tear down your application
 	}
+	
+	/// “关闭最后一个 window 窗口或者关闭应用唯一的一个 window 时应用自动退出。”
+	func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+		return true
+	}
 }
 
 // MARK: - Window 界面设置
