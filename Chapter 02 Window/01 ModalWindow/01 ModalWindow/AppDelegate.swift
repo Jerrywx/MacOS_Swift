@@ -18,22 +18,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		setupWindow()
 		
 		/// 关闭应用方法2
-		NotificationCenter.default.addObserver(self, 
-		                                       selector:#selector(AppDelegate.windowClose(_:)),  
-		                                       name: NSNotification.Name.NSWindowWillClose, 
-		                                       object: nil)
+//		NotificationCenter.default.addObserver(self, 
+//		                                       selector:#selector(AppDelegate.windowClose(_:)),  
+//		                                       name: NSNotification.Name.NSWindowWillClose, 
+//		                                       object: nil)
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {
 		// Insert code here to tear down your application
 	}
 	
+	// MARK:- 点击❌退出应用
 	/// 关闭应用方法1
 	/// “关闭最后一个 window 窗口或者关闭应用唯一的一个 window 时应用自动退出。”
 //	func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
 //		return true
 //	}
 	
+	/// 应用关闭通知 退出应用
 	func windowClose(_ aNotification: Notification) {
 		if let window = aNotification.object {
 			if window as! NSObject == self.window! {
@@ -41,6 +43,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			}
 		}
 	}
+	
+	
+	/// 应用关闭后 点击 Dock 菜单再次打开应用
+	func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+		self.window.makeKeyAndOrderFront(self)
+		return true
+	}
+	
 }
 
 // MARK: - Window 界面设置
