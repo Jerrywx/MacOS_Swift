@@ -49,7 +49,15 @@ extension AppDelegate {
 	/// 设置 Window
 	fileprivate func setupWindow() {
 		/// 是否记录上次窗口关闭位置
-		self.window.isRestorable = false
+//		self.window.isRestorable = false
+		/// 设置窗口在中间显示
+		self.window.center()
+		/// 设置窗口显示位置和大小
+		/// 坐标系远点在屏幕左下方
+//		let frame = CGRect(x: 100, y: 100, width: 800, height: 800)
+//		self.window.setFrame(frame, display: true)
+		
+		
 		/// 1. 创建自定义背景View
 		let bgView			= MainView(frame: (window.contentView?.bounds)!)
 		window.contentView	= bgView
