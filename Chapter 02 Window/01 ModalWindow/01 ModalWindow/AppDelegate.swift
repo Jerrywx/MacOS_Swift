@@ -33,6 +33,9 @@ extension AppDelegate {
 		window.contentView	= bgView
 		/// 2. 添加按钮
 		createButton()
+		
+		/// 3. window 设置
+		self.window.backgroundColor = NSColor.gray
 	}
 	
 	/// 创建按钮
@@ -41,7 +44,7 @@ extension AppDelegate {
 		/// 创建打开 Window 按钮
 		let openWindow	= NSButton(frame: CGRect(x: 40,
 		                                        y: 40, 
-		                                        width: 120,
+		                                        width: 160,
 		                                        height: 30))
 		openWindow.bezelStyle	= .regularSquare
 		openWindow.title		= "Create Window"
@@ -52,7 +55,7 @@ extension AppDelegate {
 		/// 创建Modal Window
 		let  modalWindow = NSButton(frame: CGRect(x: 40, 
 		                                          y: 100, 
-		                                          width: 120, 
+		                                          width: 160,
 		                                          height: 30))
 		modalWindow.bezelStyle	= .regularSquare
 		modalWindow.title		= "Show Modal Window"
@@ -63,7 +66,7 @@ extension AppDelegate {
 		/// 创建 Sessions Window
 		let sessionWindow = NSButton(frame: CGRect(x: 40, 
 		                                           y: 160, 
-		                                           width: 120, 
+		                                           width: 160,
 		                                           height: 30))
 		sessionWindow.bezelStyle	= .regularSquare
 		sessionWindow.title			= "Show Sessions Window"
