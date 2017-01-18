@@ -33,11 +33,21 @@ extension AppDelegate {
 		let bounds = window.contentView?.bounds
 		window.contentView = JRMainView(frame: bounds!)
 		
-		/// 2. 添加测试view
+		/// 2. 添加响应鼠标点击的view & layer
 		addMouseDownView()
+		adddrawRectView()
 	}
 	
-	/// 添加响应鼠标点击的view
+	/// 绘制View
+	private func adddrawRectView() {
+		let view = JRDrawView(frame: CGRect(x: 250, y: 40, width: 150, height: 150))
+		view.wantsLayer = true
+		view.layer?.backgroundColor = NSColor.lightGray.cgColor
+		window.contentView?.addSubview(view)
+		
+	}
+	
+	/// 添加响应鼠标点击的view & layer
 	private func addMouseDownView() {
 		let v = JRCustomView(frame: CGRect(x: 40, y: 40, width: 150, height: 150))
 		v.wantsLayer				= true
