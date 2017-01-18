@@ -50,6 +50,24 @@ extension AppDelegate {
 	/// 截图保存
 	@objc private func saveAppImage() {
 		print(#function)
+		
+		/// 锁定视图
+		window.contentView?.lockFocus()
+		/// 截取图片
+		let image = NSImage(data: (self.window.contentView?.dataWithPDF(inside: (window.contentView?.bounds)!))!)
+		window.contentView?.unlockFocus()
+		let imageData = image?.tiffRepresentation
+		
+		/// 获取保存路径
+		let fileManager = FileManager.default
+		/// 写死的
+		let path = "/Users/wangxiao/Desktop/image.png"
+		fileManager.createFile(atPath: path, contents: imageData, attributes: nil)
+		let fileUrl = URL(fileURLWithPath: path)
+		/// 保存图片
+		
+		NSWorkspace.shared().activateFileViewerSelecting([fileUrl])
+		
 	}
 	
 	/// 绘制 DrawRect绘制View
