@@ -10,11 +10,10 @@ import Cocoa
 
 class JRCustomView: NSView {
 
-	
+	/// 重写鼠标点击事件
 	override func mouseDown(with event: NSEvent) {
 		let point = self.convert(event.locationInWindow, to: nil)
 		Swift.print("window point:\(event.locationInWindow)")
-		Swift.print("window point:\(point)")
+		Swift.print("view point:\(point)")
 	}
-    
 }
