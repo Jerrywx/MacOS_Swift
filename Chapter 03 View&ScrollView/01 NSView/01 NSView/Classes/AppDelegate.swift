@@ -37,23 +37,35 @@ extension AppDelegate {
 		addMouseDownView()
 		adddrawRectView()
 		addNoDrawView()
+		
+		/// 3. 截图按钮
+		let button = NSButton(frame: CGRect(x: 250, y: 250, width: 80, height: 25))
+		button.title		= "应用截图"
+		button.bezelStyle	= .roundRect
+		button.target		= self
+		button.action		= #selector(saveAppImage)
+		window.contentView?.addSubview(button)
+		
+	}
+	/// 截图保存
+	@objc private func saveAppImage() {
+		print(#function)
 	}
 	
+	/// 绘制 DrawRect绘制View
 	private func addNoDrawView() {
 		let view = JRWithoutDrawView(frame: CGRect(x: 40, y: 250, width: 150, height: 150))
 		view.wantsLayer = true
 		view.layer?.backgroundColor = NSColor.lightGray.cgColor
 		window.contentView?.addSubview(view)
 	}
-	
-	/// 绘制View
+	/// 绘制 DrawRect绘制View
 	private func adddrawRectView() {
 		let view = JRDrawView(frame: CGRect(x: 250, y: 40, width: 150, height: 150))
 		view.wantsLayer = true
 		view.layer?.backgroundColor = NSColor.lightGray.cgColor
 		window.contentView?.addSubview(view)
 	}
-	
 	/// 添加响应鼠标点击的view & layer
 	private func addMouseDownView() {
 		let v = JRCustomView(frame: CGRect(x: 40, y: 40, width: 150, height: 150))
