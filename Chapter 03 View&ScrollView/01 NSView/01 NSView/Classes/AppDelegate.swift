@@ -36,6 +36,14 @@ extension AppDelegate {
 		/// 2. 添加响应鼠标点击的view & layer
 		addMouseDownView()
 		adddrawRectView()
+		addNoDrawView()
+	}
+	
+	private func addNoDrawView() {
+		let view = JRWithoutDrawView(frame: CGRect(x: 40, y: 250, width: 150, height: 150))
+		view.wantsLayer = true
+		view.layer?.backgroundColor = NSColor.lightGray.cgColor
+		window.contentView?.addSubview(view)
 	}
 	
 	/// 绘制View
@@ -44,7 +52,6 @@ extension AppDelegate {
 		view.wantsLayer = true
 		view.layer?.backgroundColor = NSColor.lightGray.cgColor
 		window.contentView?.addSubview(view)
-		
 	}
 	
 	/// 添加响应鼠标点击的view & layer

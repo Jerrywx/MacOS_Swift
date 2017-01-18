@@ -13,6 +13,7 @@
 		3032F0351E2F1A330091F0BC /* JRCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0321E2F1A330091F0BC /* JRCustomView.swift */; };
 		3032F0361E2F1A330091F0BC /* JRMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0331E2F1A330091F0BC /* JRMainView.swift */; };
 		3032F0381E2F316B0091F0BC /* JRDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0371E2F316B0091F0BC /* JRDrawView.swift */; };
+		3032F03A1E2F334A0091F0BC /* JRWithoutDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0391E2F334A0091F0BC /* JRWithoutDrawView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3032F0321E2F1A330091F0BC /* JRCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRCustomView.swift; sourceTree = "<group>"; };
 		3032F0331E2F1A330091F0BC /* JRMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRMainView.swift; sourceTree = "<group>"; };
 		3032F0371E2F316B0091F0BC /* JRDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRDrawView.swift; sourceTree = "<group>"; };
+		3032F0391E2F334A0091F0BC /* JRWithoutDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRWithoutDrawView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				3032F0321E2F1A330091F0BC /* JRCustomView.swift */,
 				3032F0331E2F1A330091F0BC /* JRMainView.swift */,
 				3032F0371E2F316B0091F0BC /* JRDrawView.swift */,
+				3032F0391E2F334A0091F0BC /* JRWithoutDrawView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			files = (
 				3032F0381E2F316B0091F0BC /* JRDrawView.swift in Sources */,
 				3032F0341E2F1A330091F0BC /* AppDelegate.swift in Sources */,
+				3032F03A1E2F334A0091F0BC /* JRWithoutDrawView.swift in Sources */,
 				3032F0351E2F1A330091F0BC /* JRCustomView.swift in Sources */,
 				3032F0361E2F1A330091F0BC /* JRMainView.swift in Sources */,
 			);
