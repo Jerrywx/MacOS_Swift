@@ -10,5 +10,10 @@ import Cocoa
 
 class JRMainScrollView: NSScrollView {
 
-
+	override var isFlipped: Bool {
+		get {
+			return true
+		}
+	}
+	
 }
