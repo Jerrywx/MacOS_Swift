@@ -44,6 +44,8 @@ extension AppDelegate {
 		addScrollView()
 		/// 添加控制按钮
 		addControlButton()
+		/// 添加TextView
+		addTextView()
 		
 		/// debug
 		baseView.wantsLayer = true
@@ -105,6 +107,20 @@ extension AppDelegate {
 		let rect = CGRect(x: 0, y: 0, width: 20, height: 20)
 		self.scrollView.contentView.scrollToVisible(rect)
 	}
+}
+
+// MARK: - 添加 TextView
+extension AppDelegate {
+	
+	/// 添加 TextView
+	fileprivate func addTextView() {
+		let frame		= CGRect(x: 440, y: 20, width: 400, height: 300)
+		let textView	= NSTextView(frame: frame)
+		textView.string = "asdasdsasdasdsadasdas \nasdsadasdasdasdas \nasda \nsdasda \ndsasdasdas \nkDADiskDescriptionMediaBSDNameKey\nasdasdsasdasdsadasdas \nasdsadasdasdasdas \nasda \nsdasda \ndsasdasdas \nkDADiskDescriptionMediaBSDNameKey\nasdasdsasdasdsadasdas \nasdsadasdasdasdas \nasda \nsdasda \ndsasdasdas \nkDADiskDescriptionMediaBSDNameKey\nasdasdsasdasdsadasdas \nasdsadasdasdasdas \nasda \nsdasda \ndsasdasdas \nkDADiskDescriptionMediaBSDNameKey\nasdasdsasdasdsadasdas \nasdsadasdasdasdas \nasda \nsdasda \ndsasdasdas \nkDADiskDescriptionMediaBSDNameKey\nasdasdsasdasdsadasdas \nasdsadasdasdasdas \nasda \nsdasda \ndsasdasdas \nkDADiskDescriptionMediaBSDNameKey"
+		window.contentView?.addSubview(textView)
+		
+	}
+	
 }
 
 
