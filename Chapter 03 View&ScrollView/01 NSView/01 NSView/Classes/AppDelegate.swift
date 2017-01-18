@@ -39,9 +39,12 @@ extension AppDelegate {
 	
 	/// 添加响应鼠标点击的view
 	private func addMouseDownView() {
-		let v = JRCustomView(frame: CGRect(x: 20, y: 20, width: 200, height: 200))
-		v.wantsLayer = true
-		v.layer?.backgroundColor = NSColor.orange.cgColor
+		let v = JRCustomView(frame: CGRect(x: 40, y: 40, width: 150, height: 150))
+		v.wantsLayer				= true
+		v.layer?.backgroundColor	= NSColor.orange.cgColor
+		v.layer?.cornerRadius		= 20
+		v.layer?.borderColor		= NSColor.red.cgColor
+		v.layer?.borderWidth		= 5
 		self.window.contentView?.addSubview(v)
 	}
 	
