@@ -15,7 +15,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
+		/// 初始化view
 		setupUI()
+		/// 添加通知
+		addNotification()
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {
@@ -94,7 +97,27 @@ extension AppDelegate {
 		v.layer?.borderWidth		= 5
 		self.window.contentView?.addSubview(v)
 	}
-	
 }
 
+// MARK: - 应用通知
+extension AppDelegate {
+	
+	/// 添加 frame 监听
+	func addNotification() {
+		NotificationCenter.default.addObserver(self,
+		                                       selector: #selector(frameChanged),
+		                                       name: NSNotification.Name.NSViewFrameDidChange,
+		                                       object: nil)
+	}
+	
+	/// frame 坚挺回调
+	///
+	/// - Parameter aNotification: 通知
+	func frameChanged(_ aNotification: Notification) {
+		if let view = aNotification.object {
+				print("===== \((view as AnyObject).frame)")
+		}
+	}
+	
+}
 
