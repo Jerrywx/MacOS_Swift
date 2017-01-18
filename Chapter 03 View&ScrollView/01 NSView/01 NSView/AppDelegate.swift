@@ -17,6 +17,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		// Insert code here to initialize your application
 		
+		let v = JRCustomView(frame: CGRect(x: 20, y: 20, width: 200, height: 200))
+		v.wantsLayer = true
+		v.layer?.backgroundColor = NSColor.red.cgColor
+		self.window.contentView?.addSubview(v)
 		
 	}
 

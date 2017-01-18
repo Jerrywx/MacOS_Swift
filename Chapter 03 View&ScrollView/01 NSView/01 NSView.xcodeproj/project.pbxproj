@@ -10,6 +10,7 @@
 		3032F01D1E2F16430091F0BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F01C1E2F16430091F0BC /* AppDelegate.swift */; };
 		3032F01F1E2F16430091F0BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3032F01E1E2F16430091F0BC /* Assets.xcassets */; };
 		3032F0221E2F16430091F0BC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3032F0201E2F16430091F0BC /* MainMenu.xib */; };
+		3032F02C1E2F18D00091F0BC /* JRCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F02B1E2F18D00091F0BC /* JRCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		3032F01E1E2F16430091F0BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3032F0211E2F16430091F0BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3032F0231E2F16430091F0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3032F02B1E2F18D00091F0BC /* JRCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,11 +53,20 @@
 			isa = PBXGroup;
 			children = (
 				3032F01C1E2F16430091F0BC /* AppDelegate.swift */,
+				3032F02B1E2F18D00091F0BC /* JRCustomView.swift */,
+				3032F02D1E2F18DB0091F0BC /* SupportFile */,
+			);
+			path = "01 NSView";
+			sourceTree = "<group>";
+		};
+		3032F02D1E2F18DB0091F0BC /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
 				3032F01E1E2F16430091F0BC /* Assets.xcassets */,
 				3032F0201E2F16430091F0BC /* MainMenu.xib */,
 				3032F0231E2F16430091F0BC /* Info.plist */,
 			);
-			path = "01 NSView";
+			name = SupportFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3032F01D1E2F16430091F0BC /* AppDelegate.swift in Sources */,
+				3032F02C1E2F18D00091F0BC /* JRCustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
