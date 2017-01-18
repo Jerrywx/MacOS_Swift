@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3032F0481E2F473D0091F0BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0471E2F473D0091F0BC /* AppDelegate.swift */; };
 		3032F04A1E2F473D0091F0BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3032F0491E2F473D0091F0BC /* Assets.xcassets */; };
 		3032F04D1E2F473D0091F0BC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3032F04B1E2F473D0091F0BC /* MainMenu.xib */; };
+		3032F0571E2F49300091F0BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0561E2F49300091F0BC /* AppDelegate.swift */; };
+		3032F0591E2F49480091F0BC /* JRMainScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0581E2F49480091F0BC /* JRMainScrollView.swift */; };
+		3032F05B1E2F50E70091F0BC /* JRBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F05A1E2F50E70091F0BC /* JRBaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3032F0441E2F473D0091F0BC /* 02 NSScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "02 NSScrollView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3032F0471E2F473D0091F0BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3032F0491E2F473D0091F0BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3032F04C1E2F473D0091F0BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3032F04E1E2F473D0091F0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3032F0561E2F49300091F0BC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3032F0581E2F49480091F0BC /* JRMainScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRMainScrollView.swift; sourceTree = "<group>"; };
+		3032F05A1E2F50E70091F0BC /* JRBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +54,30 @@
 		3032F0461E2F473D0091F0BC /* 02 NSScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				3032F0471E2F473D0091F0BC /* AppDelegate.swift */,
+				3032F0551E2F49300091F0BC /* Classes */,
+				3032F0541E2F49190091F0BC /* SupportFile */,
+			);
+			path = "02 NSScrollView";
+			sourceTree = "<group>";
+		};
+		3032F0541E2F49190091F0BC /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
 				3032F0491E2F473D0091F0BC /* Assets.xcassets */,
 				3032F04B1E2F473D0091F0BC /* MainMenu.xib */,
 				3032F04E1E2F473D0091F0BC /* Info.plist */,
 			);
-			path = "02 NSScrollView";
+			name = SupportFile;
+			sourceTree = "<group>";
+		};
+		3032F0551E2F49300091F0BC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3032F0561E2F49300091F0BC /* AppDelegate.swift */,
+				3032F0581E2F49480091F0BC /* JRMainScrollView.swift */,
+				3032F05A1E2F50E70091F0BC /* JRBaseView.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3032F0481E2F473D0091F0BC /* AppDelegate.swift in Sources */,
+				3032F0591E2F49480091F0BC /* JRMainScrollView.swift in Sources */,
+				3032F0571E2F49300091F0BC /* AppDelegate.swift in Sources */,
+				3032F05B1E2F50E70091F0BC /* JRBaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
