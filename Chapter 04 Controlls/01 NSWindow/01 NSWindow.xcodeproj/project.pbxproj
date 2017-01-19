@@ -10,6 +10,9 @@
 		3032F09C1E30A0570091F0BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3032F09B1E30A0570091F0BC /* Assets.xcassets */; };
 		3032F0A71E30BC750091F0BC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0A61E30BC750091F0BC /* main.swift */; };
 		3032F0AB1E30BEF50091F0BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0AA1E30BEF50091F0BC /* AppDelegate.swift */; };
+		3032F0AD1E30BF5C0091F0BC /* JRBaseWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0AC1E30BF5C0091F0BC /* JRBaseWindowController.swift */; };
+		3032F0AF1E30BF760091F0BC /* JRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0AE1E30BF760091F0BC /* JRBaseViewController.swift */; };
+		3032F0B11E30BFBA0091F0BC /* JRBaseWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0B01E30BFBA0091F0BC /* JRBaseWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +21,9 @@
 		3032F0A01E30A0580091F0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3032F0A61E30BC750091F0BC /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3032F0AA1E30BEF50091F0BC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3032F0AC1E30BF5C0091F0BC /* JRBaseWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseWindowController.swift; sourceTree = "<group>"; };
+		3032F0AE1E30BF760091F0BC /* JRBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseViewController.swift; sourceTree = "<group>"; };
+		3032F0B01E30BFBA0091F0BC /* JRBaseWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				3032F0AA1E30BEF50091F0BC /* AppDelegate.swift */,
+				3032F0AC1E30BF5C0091F0BC /* JRBaseWindowController.swift */,
+				3032F0AE1E30BF760091F0BC /* JRBaseViewController.swift */,
+				3032F0B01E30BFBA0091F0BC /* JRBaseWindow.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -146,6 +155,9 @@
 			files = (
 				3032F0AB1E30BEF50091F0BC /* AppDelegate.swift in Sources */,
 				3032F0A71E30BC750091F0BC /* main.swift in Sources */,
+				3032F0B11E30BFBA0091F0BC /* JRBaseWindow.swift in Sources */,
+				3032F0AD1E30BF5C0091F0BC /* JRBaseWindowController.swift in Sources */,
+				3032F0AF1E30BF760091F0BC /* JRBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

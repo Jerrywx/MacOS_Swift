@@ -11,9 +11,15 @@ import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
+	/// WindowController
+	lazy var windowController: JRBaseWindowController = {
+		let windowController = JRBaseWindowController()
+		return windowController
+	}()
+	
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-		// Insert code here to initialize your application
+		/// 显示windowController
+		self.windowController.showWindow(self)
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {

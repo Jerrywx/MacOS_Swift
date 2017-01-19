@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  JRBaseWindow.swift
 //  01 NSWindow
 //
 //  Created by 王潇 on 2017/1/19.
@@ -8,12 +8,8 @@
 
 import Cocoa
 
-autoreleasepool {
+class JRBaseWindow: NSWindow {
+
 	
-	let app = NSApplication.shared()
 	
-	let delegate = AppDelegate()
-	app.delegate = delegate
-	
-	app.run()
 }
