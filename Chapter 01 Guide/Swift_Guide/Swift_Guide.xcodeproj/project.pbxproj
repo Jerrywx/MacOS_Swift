@@ -9,17 +9,25 @@
 /* Begin PBXBuildFile section */
 		3032F0731E305E600091F0BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0721E305E600091F0BC /* AppDelegate.swift */; };
 		3032F0751E305E600091F0BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3032F0741E305E600091F0BC /* Assets.xcassets */; };
-		3032F0781E305E600091F0BC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3032F0761E305E600091F0BC /* MainMenu.xib */; };
+		3032F0821E306B500091F0BC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0811E306B500091F0BC /* main.swift */; };
+		3032F0841E306BB40091F0BC /* MyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0831E306BB40091F0BC /* MyWindow.swift */; };
+		3032F0861E3077B90091F0BC /* JRMainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0851E3077B90091F0BC /* JRMainWindowController.swift */; };
+		3032F0881E30913B0091F0BC /* JRWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0871E30913B0091F0BC /* JRWindow.swift */; };
+		3032F08C1E3091920091F0BC /* JRMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F08B1E3091920091F0BC /* JRMainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3032F06F1E305E600091F0BC /* Swift_Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Guide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3032F0721E305E600091F0BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3032F0741E305E600091F0BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3032F0771E305E600091F0BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3032F0791E305E600091F0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3032F07F1E305F210091F0BC /* jr_NSResponder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jr_NSResponder.h; sourceTree = "<group>"; };
 		3032F0801E3060410091F0BC /* jr_NSControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jr_NSControl.h; sourceTree = "<group>"; };
+		3032F0811E306B500091F0BC /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3032F0831E306BB40091F0BC /* MyWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWindow.swift; sourceTree = "<group>"; };
+		3032F0851E3077B90091F0BC /* JRMainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRMainWindowController.swift; sourceTree = "<group>"; };
+		3032F0871E30913B0091F0BC /* JRWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRWindow.swift; sourceTree = "<group>"; };
+		3032F08B1E3091920091F0BC /* JRMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRMainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,12 +60,16 @@
 		3032F0711E305E600091F0BC /* Swift_Guide */ = {
 			isa = PBXGroup;
 			children = (
+				3032F0871E30913B0091F0BC /* JRWindow.swift */,
+				3032F0851E3077B90091F0BC /* JRMainWindowController.swift */,
 				3032F0721E305E600091F0BC /* AppDelegate.swift */,
+				3032F08B1E3091920091F0BC /* JRMainViewController.swift */,
 				3032F07F1E305F210091F0BC /* jr_NSResponder.h */,
 				3032F0801E3060410091F0BC /* jr_NSControl.h */,
 				3032F0741E305E600091F0BC /* Assets.xcassets */,
-				3032F0761E305E600091F0BC /* MainMenu.xib */,
 				3032F0791E305E600091F0BC /* Info.plist */,
+				3032F0811E306B500091F0BC /* main.swift */,
+				3032F0831E306BB40091F0BC /* MyWindow.swift */,
 			);
 			path = Swift_Guide;
 			sourceTree = "<group>";
@@ -122,7 +134,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3032F0751E305E600091F0BC /* Assets.xcassets in Resources */,
-				3032F0781E305E600091F0BC /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,22 +144,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3032F0861E3077B90091F0BC /* JRMainWindowController.swift in Sources */,
+				3032F08C1E3091920091F0BC /* JRMainViewController.swift in Sources */,
+				3032F0841E306BB40091F0BC /* MyWindow.swift in Sources */,
+				3032F0881E30913B0091F0BC /* JRWindow.swift in Sources */,
+				3032F0821E306B500091F0BC /* main.swift in Sources */,
 				3032F0731E305E600091F0BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		3032F0761E305E600091F0BC /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3032F0771E305E600091F0BC /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3032F07A1E305E600091F0BC /* Debug */ = {
