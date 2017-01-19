@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3032F09A1E30A0570091F0BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0991E30A0570091F0BC /* AppDelegate.swift */; };
 		3032F09C1E30A0570091F0BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3032F09B1E30A0570091F0BC /* Assets.xcassets */; };
-		3032F09F1E30A0580091F0BC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3032F09D1E30A0580091F0BC /* MainMenu.xib */; };
+		3032F0A71E30BC750091F0BC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0A61E30BC750091F0BC /* main.swift */; };
+		3032F0AB1E30BEF50091F0BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0AA1E30BEF50091F0BC /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3032F0961E30A0570091F0BC /* 01 NSWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01 NSWindow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3032F0991E30A0570091F0BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3032F09B1E30A0570091F0BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3032F09E1E30A0580091F0BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3032F0A01E30A0580091F0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3032F0A61E30BC750091F0BC /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3032F0AA1E30BEF50091F0BC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +50,28 @@
 		3032F0981E30A0570091F0BC /* 01 NSWindow */ = {
 			isa = PBXGroup;
 			children = (
-				3032F0991E30A0570091F0BC /* AppDelegate.swift */,
-				3032F09B1E30A0570091F0BC /* Assets.xcassets */,
-				3032F09D1E30A0580091F0BC /* MainMenu.xib */,
-				3032F0A01E30A0580091F0BC /* Info.plist */,
+				3032F0A91E30BEF50091F0BC /* Classes */,
+				3032F0A81E30BEDB0091F0BC /* SupportFile */,
 			);
 			path = "01 NSWindow";
+			sourceTree = "<group>";
+		};
+		3032F0A81E30BEDB0091F0BC /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				3032F09B1E30A0570091F0BC /* Assets.xcassets */,
+				3032F0A01E30A0580091F0BC /* Info.plist */,
+				3032F0A61E30BC750091F0BC /* main.swift */,
+			);
+			name = SupportFile;
+			sourceTree = "<group>";
+		};
+		3032F0A91E30BEF50091F0BC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3032F0AA1E30BEF50091F0BC /* AppDelegate.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +134,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3032F09C1E30A0570091F0BC /* Assets.xcassets in Resources */,
-				3032F09F1E30A0580091F0BC /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,22 +144,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3032F09A1E30A0570091F0BC /* AppDelegate.swift in Sources */,
+				3032F0AB1E30BEF50091F0BC /* AppDelegate.swift in Sources */,
+				3032F0A71E30BC750091F0BC /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		3032F09D1E30A0580091F0BC /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3032F09E1E30A0580091F0BC /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3032F0A11E30A0580091F0BC /* Debug */ = {
