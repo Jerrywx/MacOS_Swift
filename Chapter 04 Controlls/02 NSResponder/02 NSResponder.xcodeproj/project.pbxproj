@@ -14,6 +14,8 @@
 		3032F0D61E30CD3A0091F0BC /* JRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0D51E30CD3A0091F0BC /* JRBaseViewController.swift */; };
 		3032F0D81E30CD4C0091F0BC /* JRBaseWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0D71E30CD4C0091F0BC /* JRBaseWindow.swift */; };
 		3032F0DA1E30CD550091F0BC /* JRBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032F0D91E30CD550091F0BC /* JRBaseView.swift */; };
+		3041B5361E345A35007EF87B /* JRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3041B5351E345A35007EF87B /* JRView.swift */; };
+		3041B5381E345A4A007EF87B /* JRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3041B5371E345A4A007EF87B /* JRButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3032F0D51E30CD3A0091F0BC /* JRBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseViewController.swift; sourceTree = "<group>"; };
 		3032F0D71E30CD4C0091F0BC /* JRBaseWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseWindow.swift; sourceTree = "<group>"; };
 		3032F0D91E30CD550091F0BC /* JRBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseView.swift; sourceTree = "<group>"; };
+		3041B5351E345A35007EF87B /* JRView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRView.swift; sourceTree = "<group>"; };
+		3041B5371E345A4A007EF87B /* JRButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 				3032F0D51E30CD3A0091F0BC /* JRBaseViewController.swift */,
 				3032F0D71E30CD4C0091F0BC /* JRBaseWindow.swift */,
 				3032F0D91E30CD550091F0BC /* JRBaseView.swift */,
+				3041B5351E345A35007EF87B /* JRView.swift */,
+				3041B5371E345A4A007EF87B /* JRButton.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -173,6 +179,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3041B5361E345A35007EF87B /* JRView.swift in Sources */,
+				3041B5381E345A4A007EF87B /* JRButton.swift in Sources */,
 				3032F0D21E30CCC20091F0BC /* AppDelegate.swift in Sources */,
 				3032F0D41E30CD280091F0BC /* JRBaseWindowController.swift in Sources */,
 				3032F0D81E30CD4C0091F0BC /* JRBaseWindow.swift in Sources */,
@@ -320,6 +328,7 @@
 				3032F0CA1E30CBA80091F0BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
