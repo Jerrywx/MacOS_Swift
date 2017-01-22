@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		3022CC691E3492A4007F9F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022CC681E3492A4007F9F22 /* AppDelegate.swift */; };
 		3022CC6B1E3492A4007F9F22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3022CC6A1E3492A4007F9F22 /* Assets.xcassets */; };
-		3022CC6E1E3492A4007F9F22 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3022CC6C1E3492A4007F9F22 /* MainMenu.xib */; };
+		3022CC771E34936D007F9F22 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022CC761E34936D007F9F22 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3022CC651E3492A4007F9F22 /* 01 NSPanel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01 NSPanel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3022CC681E3492A4007F9F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3022CC6A1E3492A4007F9F22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3022CC6D1E3492A4007F9F22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3022CC6F1E3492A4007F9F22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3022CC761E34936D007F9F22 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,11 +51,19 @@
 			isa = PBXGroup;
 			children = (
 				3022CC681E3492A4007F9F22 /* AppDelegate.swift */,
-				3022CC6A1E3492A4007F9F22 /* Assets.xcassets */,
-				3022CC6C1E3492A4007F9F22 /* MainMenu.xib */,
-				3022CC6F1E3492A4007F9F22 /* Info.plist */,
+				3022CC751E34934E007F9F22 /* SupportFile */,
 			);
 			path = "01 NSPanel";
+			sourceTree = "<group>";
+		};
+		3022CC751E34934E007F9F22 /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				3022CC6A1E3492A4007F9F22 /* Assets.xcassets */,
+				3022CC6F1E3492A4007F9F22 /* Info.plist */,
+				3022CC761E34936D007F9F22 /* main.swift */,
+			);
+			name = SupportFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +126,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3022CC6B1E3492A4007F9F22 /* Assets.xcassets in Resources */,
-				3022CC6E1E3492A4007F9F22 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,22 +136,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3022CC771E34936D007F9F22 /* main.swift in Sources */,
 				3022CC691E3492A4007F9F22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		3022CC6C1E3492A4007F9F22 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3022CC6D1E3492A4007F9F22 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3022CC701E3492A4007F9F22 /* Debug */ = {
