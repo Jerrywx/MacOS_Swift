@@ -131,6 +131,10 @@ extension JRBaseViewController: NSTextFieldDelegate {
 		print(#function)
 	}
 	
+	override func controlTextDidChange(_ obj: Notification) {
+		print(self.userName.stringValue)
+	}
+	
 }
 
 
