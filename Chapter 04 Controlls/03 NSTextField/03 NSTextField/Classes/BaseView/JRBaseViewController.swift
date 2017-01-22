@@ -66,6 +66,7 @@ extension JRBaseViewController {
 		userField.frame.origin.x	= 160
 		userField.frame.size.width	= 200
 		userField.backgroundColor	= NSColor.clear
+		userField.delegate			= self
 		self.view.addSubview(userField)
 		self.userName = userField
 		
@@ -108,7 +109,7 @@ extension JRBaseViewController {
 		print("用户名: \(self.userName.stringValue)")
 		print("用户密码: \(self.userField.stringValue)")
 	}
-	
+
 	/// 测试View
 	private func addTestView() {
 		let view = JRBaseView(frame: CGRect(x: 20, y: 20, width: 80, height: 80))
@@ -117,6 +118,25 @@ extension JRBaseViewController {
 		self.view.addSubview(view)
 	}
 }
+
+
+// MARK: - NSTextFieldDelegate
+extension JRBaseViewController: NSTextFieldDelegate {
+
+	override func controlTextDidBeginEditing(_ obj: Notification) {
+		print(#function)
+	}
+	
+	override func controlTextDidEndEditing(_ obj: Notification) {
+		print(#function)
+	}
+	
+}
+
+
+
+
+
 
 
 
