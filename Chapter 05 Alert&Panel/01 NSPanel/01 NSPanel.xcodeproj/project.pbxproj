@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3022CC691E3492A4007F9F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022CC681E3492A4007F9F22 /* AppDelegate.swift */; };
 		3022CC6B1E3492A4007F9F22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3022CC6A1E3492A4007F9F22 /* Assets.xcassets */; };
 		3022CC771E34936D007F9F22 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022CC761E34936D007F9F22 /* main.swift */; };
+		3022CC7C1E349437007F9F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022CC791E349437007F9F22 /* AppDelegate.swift */; };
+		3022CC7E1E34944A007F9F22 /* JRBaseWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022CC7D1E34944A007F9F22 /* JRBaseWindowController.swift */; };
+		3022CC801E349458007F9F22 /* JRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022CC7F1E349458007F9F22 /* JRBaseViewController.swift */; };
+		3022CC821E349467007F9F22 /* JRBaseWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022CC811E349467007F9F22 /* JRBaseWindow.swift */; };
+		3022CC841E349476007F9F22 /* JRBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022CC831E349476007F9F22 /* JRBaseView.swift */; };
+		3022CC861E349BE5007F9F22 /* JRBasePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022CC851E349BE5007F9F22 /* JRBasePanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3022CC651E3492A4007F9F22 /* 01 NSPanel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01 NSPanel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3022CC681E3492A4007F9F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3022CC6A1E3492A4007F9F22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3022CC6F1E3492A4007F9F22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3022CC761E34936D007F9F22 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3022CC791E349437007F9F22 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3022CC7D1E34944A007F9F22 /* JRBaseWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseWindowController.swift; sourceTree = "<group>"; };
+		3022CC7F1E349458007F9F22 /* JRBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseViewController.swift; sourceTree = "<group>"; };
+		3022CC811E349467007F9F22 /* JRBaseWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseWindow.swift; sourceTree = "<group>"; };
+		3022CC831E349476007F9F22 /* JRBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseView.swift; sourceTree = "<group>"; };
+		3022CC851E349BE5007F9F22 /* JRBasePanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBasePanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +60,7 @@
 		3022CC671E3492A4007F9F22 /* 01 NSPanel */ = {
 			isa = PBXGroup;
 			children = (
-				3022CC681E3492A4007F9F22 /* AppDelegate.swift */,
+				3022CC781E349437007F9F22 /* Classes */,
 				3022CC751E34934E007F9F22 /* SupportFile */,
 			);
 			path = "01 NSPanel";
@@ -64,6 +74,35 @@
 				3022CC761E34936D007F9F22 /* main.swift */,
 			);
 			name = SupportFile;
+			sourceTree = "<group>";
+		};
+		3022CC781E349437007F9F22 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3022CC791E349437007F9F22 /* AppDelegate.swift */,
+				3022CC7A1E349437007F9F22 /* BaseControls */,
+				3022CC7B1E349437007F9F22 /* Controller */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3022CC7A1E349437007F9F22 /* BaseControls */ = {
+			isa = PBXGroup;
+			children = (
+				3022CC7D1E34944A007F9F22 /* JRBaseWindowController.swift */,
+				3022CC7F1E349458007F9F22 /* JRBaseViewController.swift */,
+				3022CC811E349467007F9F22 /* JRBaseWindow.swift */,
+				3022CC831E349476007F9F22 /* JRBaseView.swift */,
+				3022CC851E349BE5007F9F22 /* JRBasePanel.swift */,
+			);
+			path = BaseControls;
+			sourceTree = "<group>";
+		};
+		3022CC7B1E349437007F9F22 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +175,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3022CC7C1E349437007F9F22 /* AppDelegate.swift in Sources */,
+				3022CC861E349BE5007F9F22 /* JRBasePanel.swift in Sources */,
+				3022CC7E1E34944A007F9F22 /* JRBaseWindowController.swift in Sources */,
+				3022CC821E349467007F9F22 /* JRBaseWindow.swift in Sources */,
 				3022CC771E34936D007F9F22 /* main.swift in Sources */,
-				3022CC691E3492A4007F9F22 /* AppDelegate.swift in Sources */,
+				3022CC801E349458007F9F22 /* JRBaseViewController.swift in Sources */,
+				3022CC841E349476007F9F22 /* JRBaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
