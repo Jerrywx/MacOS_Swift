@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3022CC421E347E80007F9F22 /* JRBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022CC411E347E80007F9F22 /* JRBaseView.swift */; };
 		3041B5481E345EED007EF87B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3041B5471E345EED007EF87B /* Assets.xcassets */; };
 		3041B5571E345F2B007EF87B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3041B5541E345F2B007EF87B /* AppDelegate.swift */; };
+		3041B5591E346067007EF87B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3041B5581E346067007EF87B /* main.swift */; };
+		3041B55B1E3460C8007EF87B /* JRBaseWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3041B55A1E3460C8007EF87B /* JRBaseWindowController.swift */; };
+		3041B55D1E3460D4007EF87B /* JRBaseWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3041B55C1E3460D4007EF87B /* JRBaseWindow.swift */; };
+		3041B55F1E3460E3007EF87B /* JRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3041B55E1E3460E3007EF87B /* JRBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3022CC411E347E80007F9F22 /* JRBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseView.swift; sourceTree = "<group>"; };
 		3041B5421E345EED007EF87B /* 03 NSTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "03 NSTextField.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3041B5471E345EED007EF87B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3041B54C1E345EEE007EF87B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3041B5541E345F2B007EF87B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3041B5581E346067007EF87B /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3041B55A1E3460C8007EF87B /* JRBaseWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseWindowController.swift; sourceTree = "<group>"; };
+		3041B55C1E3460D4007EF87B /* JRBaseWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseWindow.swift; sourceTree = "<group>"; };
+		3041B55E1E3460E3007EF87B /* JRBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,7 @@
 			children = (
 				3041B5471E345EED007EF87B /* Assets.xcassets */,
 				3041B54C1E345EEE007EF87B /* Info.plist */,
+				3041B5581E346067007EF87B /* main.swift */,
 			);
 			name = SupportFile;
 			sourceTree = "<group>";
@@ -76,6 +87,10 @@
 		3041B5551E345F2B007EF87B /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
+				3041B55A1E3460C8007EF87B /* JRBaseWindowController.swift */,
+				3041B55E1E3460E3007EF87B /* JRBaseViewController.swift */,
+				3041B55C1E3460D4007EF87B /* JRBaseWindow.swift */,
+				3022CC411E347E80007F9F22 /* JRBaseView.swift */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -157,7 +172,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3041B55D1E3460D4007EF87B /* JRBaseWindow.swift in Sources */,
+				3041B55F1E3460E3007EF87B /* JRBaseViewController.swift in Sources */,
+				3041B5591E346067007EF87B /* main.swift in Sources */,
+				3041B55B1E3460C8007EF87B /* JRBaseWindowController.swift in Sources */,
 				3041B5571E345F2B007EF87B /* AppDelegate.swift in Sources */,
+				3022CC421E347E80007F9F22 /* JRBaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +319,7 @@
 				3041B5511E345EEE007EF87B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

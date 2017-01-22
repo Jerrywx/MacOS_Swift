@@ -8,20 +8,28 @@
 
 import Cocoa
 
-@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-	@IBOutlet weak var window: NSWindow!
-
-
+	/// 窗口控制器
+	lazy var myWindowController: JRBaseWindowController = {
+		let windowController = JRBaseWindowController()
+		return windowController
+	}()
+	
+	
+	/// 引用启动
+	///
+	/// - Parameter aNotification: 通知
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-		// Insert code here to initialize your application
+		self.myWindowController.showWindow(self)
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {
 		// Insert code here to tear down your application
 	}
-
-
+	
+	func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+		return true
+	}
 }
 
