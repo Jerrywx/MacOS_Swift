@@ -39,14 +39,35 @@ extension JRBaseViewController {
 	
 	fileprivate func setupUI() {
 		
-		let button			= NSButton(frame: CGRect(x: 100, y: 100, width: 80, height: 30))
+		/// 打开 普通 Pannel
+		let button			= NSButton(frame: CGRect(x: 100, y: 30, width: 120, height: 30))
 		button.bezelStyle	= .roundRect
-		button.title		= "打开 Pannel"
+		button.title		= "打开 普通 Pannel"
 		button.target		= self
 		button.action		= #selector(openPanel)
 		self.view.addSubview(button)
+		
+		/// 打开文件
+		let button2			= NSButton(frame: CGRect(x: 100, y: 90, width: 120, height: 30))
+		button2.bezelStyle	= .roundRect
+		button2.title		= "打开 文件 Pannel"
+		button.target		= self
+		button2.action		= #selector(openFile)
+		self.view.addSubview(button2)
 	}
-	
+	////////////////////////////////////////////////////////
+	@objc private func openFile() {
+		let openDlg = NSOpenPanel()
+		openDlg.canChooseFiles = true
+		openDlg.canChooseDirectories = false
+		openDlg.allowsMultipleSelection = false
+		openDlg.allowedFileTypes = ["jpg"]
+		openDlg.begin(completionHandler: { [weak self]  result in
+			
+		})
+	}
+
+	////////////////////////////////////////////////////////
 	@objc private func openPanel() {
 		print(#function)
 		let frame = CGRect(x: 0, y: 0, width: 400, height: 300)
