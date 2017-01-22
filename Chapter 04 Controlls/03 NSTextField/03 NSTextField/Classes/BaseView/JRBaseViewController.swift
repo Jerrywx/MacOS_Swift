@@ -10,6 +10,9 @@ import Cocoa
 
 class JRBaseViewController: NSViewController {
 
+	var userName: NSTextField!
+	var userField: NSSecureTextField!
+	
 	lazy var myView: JRBaseView = {
 		let frame = CGRect(x: 0, y: 0, width: 800, height: 400)
 		let baseView = JRBaseView(frame: frame)
@@ -64,6 +67,7 @@ extension JRBaseViewController {
 		userField.frame.size.width	= 200
 		userField.backgroundColor	= NSColor.clear
 		self.view.addSubview(userField)
+		self.userName = userField
 		
 		/// 用户密码
 		let userPsw: NSTextField	= NSTextField(string: "password:")
@@ -75,9 +79,9 @@ extension JRBaseViewController {
 		userPsw.frame.size.width	= 100
 		userPsw.backgroundColor	= NSColor.clear
 		self.view.addSubview(userPsw)
-		
+
 		/// 用户名输入框
-		let pwdField: NSTextField	= NSSecureTextField()
+		let pwdField: NSSecureTextField	= NSSecureTextField()
 		pwdField.placeholderString	= "password"
 		pwdField.sizeToFit()
 		pwdField.maximumNumberOfLines = 1
@@ -86,6 +90,7 @@ extension JRBaseViewController {
 		pwdField.frame.size.width	= 200
 		pwdField.backgroundColor	= NSColor.clear
 		self.view.addSubview(pwdField)
+		self.userField = pwdField
 		
 		
 		/// 登录
@@ -100,6 +105,8 @@ extension JRBaseViewController {
 	/// 登录操作
 	@objc private func loginAction() {
 		print(#function)
+		print("用户名: \(self.userName.stringValue)")
+		print("用户密码: \(self.userField.stringValue)")
 	}
 	
 	/// 测试View
