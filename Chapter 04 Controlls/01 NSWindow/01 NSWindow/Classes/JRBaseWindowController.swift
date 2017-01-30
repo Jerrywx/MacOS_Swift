@@ -33,11 +33,6 @@ class JRBaseWindowController: NSWindowController {
 		
 		self.window = self.myWindow
 		self.contentViewController = self.vc
-
-//		print(myWindow)
-//		print(self.vc)
-//		print(self.vc)
-//		self.window?.center()
 	}
 	
 	required init?(coder: NSCoder) {
