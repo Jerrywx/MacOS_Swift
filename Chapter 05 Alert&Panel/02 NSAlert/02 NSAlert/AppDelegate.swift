@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  01 NSPanel
+//  02 NSAlert
 //
 //  Created by 王潇 on 2017/1/22.
 //  Copyright © 2017年 王潇. All rights reserved.
@@ -8,24 +8,20 @@
 
 import Cocoa
 
+@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-	lazy var windwoController: JRBaseWindowController = {
-		let windowController = JRBaseWindowController()
-		return windowController
-	}()
-	
+	@IBOutlet weak var window: NSWindow!
+
+
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-		self.windwoController.showWindow(self)
+		// Insert code here to initialize your application
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {
 		// Insert code here to tear down your application
 	}
-	
-	func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-		return true
-	}
+
 
 }
 
