@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3014711C1E49641C00FDFD7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014711B1E49641C00FDFD7F /* AppDelegate.swift */; };
-		3014711E1E49641C00FDFD7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014711D1E49641C00FDFD7F /* ViewController.swift */; };
 		301471201E49641C00FDFD7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3014711F1E49641C00FDFD7F /* Assets.xcassets */; };
-		301471231E49641C00FDFD7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301471211E49641C00FDFD7F /* Main.storyboard */; };
+		3014712C1E4964B800FDFD7F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014712B1E4964B800FDFD7F /* main.swift */; };
+		301471301E4965F500FDFD7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3014712E1E4965F500FDFD7F /* AppDelegate.swift */; };
+		301471321E49662F00FDFD7F /* JRBaseWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301471311E49662F00FDFD7F /* JRBaseWindowController.swift */; };
+		301471341E49664200FDFD7F /* JRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301471331E49664200FDFD7F /* JRBaseViewController.swift */; };
+		301471361E49664F00FDFD7F /* JRBaseWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301471351E49664F00FDFD7F /* JRBaseWindow.swift */; };
+		301471381E49665800FDFD7F /* JRBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301471371E49665800FDFD7F /* JRBaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		301471181E49641C00FDFD7F /* TableViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3014711B1E49641C00FDFD7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3014711D1E49641C00FDFD7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3014711F1E49641C00FDFD7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		301471221E49641C00FDFD7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		301471241E49641C00FDFD7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3014712B1E4964B800FDFD7F /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3014712E1E4965F500FDFD7F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		301471311E49662F00FDFD7F /* JRBaseWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseWindowController.swift; sourceTree = "<group>"; };
+		301471331E49664200FDFD7F /* JRBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseViewController.swift; sourceTree = "<group>"; };
+		301471351E49664F00FDFD7F /* JRBaseWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseWindow.swift; sourceTree = "<group>"; };
+		301471371E49665800FDFD7F /* JRBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRBaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +58,40 @@
 		3014711A1E49641C00FDFD7F /* TableViewCode */ = {
 			isa = PBXGroup;
 			children = (
-				3014711B1E49641C00FDFD7F /* AppDelegate.swift */,
-				3014711D1E49641C00FDFD7F /* ViewController.swift */,
-				3014711F1E49641C00FDFD7F /* Assets.xcassets */,
-				301471211E49641C00FDFD7F /* Main.storyboard */,
-				301471241E49641C00FDFD7F /* Info.plist */,
+				3014712D1E4965F500FDFD7F /* Classes */,
+				3014712A1E49647200FDFD7F /* SupportFile */,
 			);
 			path = TableViewCode;
+			sourceTree = "<group>";
+		};
+		3014712A1E49647200FDFD7F /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				3014711F1E49641C00FDFD7F /* Assets.xcassets */,
+				301471241E49641C00FDFD7F /* Info.plist */,
+				3014712B1E4964B800FDFD7F /* main.swift */,
+			);
+			name = SupportFile;
+			sourceTree = "<group>";
+		};
+		3014712D1E4965F500FDFD7F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3014712E1E4965F500FDFD7F /* AppDelegate.swift */,
+				3014712F1E4965F500FDFD7F /* BaseClasses */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3014712F1E4965F500FDFD7F /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				301471311E49662F00FDFD7F /* JRBaseWindowController.swift */,
+				301471331E49664200FDFD7F /* JRBaseViewController.swift */,
+				301471351E49664F00FDFD7F /* JRBaseWindow.swift */,
+				301471371E49665800FDFD7F /* JRBaseView.swift */,
+			);
+			path = BaseClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +120,7 @@
 		301471101E49641C00FDFD7F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JR;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "王潇";
@@ -121,7 +155,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				301471201E49641C00FDFD7F /* Assets.xcassets in Resources */,
-				301471231E49641C00FDFD7F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,23 +165,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3014711E1E49641C00FDFD7F /* ViewController.swift in Sources */,
-				3014711C1E49641C00FDFD7F /* AppDelegate.swift in Sources */,
+				301471301E4965F500FDFD7F /* AppDelegate.swift in Sources */,
+				301471321E49662F00FDFD7F /* JRBaseWindowController.swift in Sources */,
+				301471361E49664F00FDFD7F /* JRBaseWindow.swift in Sources */,
+				3014712C1E4964B800FDFD7F /* main.swift in Sources */,
+				301471341E49664200FDFD7F /* JRBaseViewController.swift in Sources */,
+				301471381E49665800FDFD7F /* JRBaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		301471211E49641C00FDFD7F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				301471221E49641C00FDFD7F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		301471251E49641C00FDFD7F /* Debug */ = {
@@ -288,6 +314,7 @@
 				301471291E49641C00FDFD7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
